@@ -11,8 +11,6 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - pg_data_todolist:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
     healthcheck:
       test: pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}
       interval: 5s
