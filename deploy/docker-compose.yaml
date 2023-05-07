@@ -38,6 +38,7 @@ services:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./src/static:/opt/static/
 
 volumes:
   pg_data_todolist:
